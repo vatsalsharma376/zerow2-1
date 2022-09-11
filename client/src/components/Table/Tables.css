@@ -1,0 +1,124 @@
+
+@import "rsuite/dist/rsuite.css";
+
+
+
+
+html {
+    margin: 0;
+    padding: 0;
+    height:100%;
+    width: 100%;
+    font-family: sans-serif;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    height:100%;
+    width: 100%;
+  }
+
+  .tb-page{
+    background-color: #fff;
+  }
+  
+/* CSS */
+.delete-btn {
+  align-items: center;
+  background-color: #FFE7E7;
+  background-position: 0 0;
+  border: 1px solid #FEE0E0;
+  border-radius: 11px;
+  box-sizing: border-box;
+  color: #D33A2C;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 33.4929px;
+  list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg) none;
+  margin-left: 25%;
+  padding: 2px 12px;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-underline-offset: 1px;
+  transition: border .2s ease-in-out,box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.delete-btn:active,
+.delete-btn:hover,
+.delete-btn:focus {
+  outline: 0;
+}
+
+
+.delete-btn:active {
+  background-color: #D33A2C;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #FFFFFF;
+}
+
+.delete-btn:hover {
+  background-color: #FFE3E3;
+  border-color: #FAA4A4;
+}
+
+.delete-btn:active:hover,
+.delete-btn:focus:hover,
+.delete-btn:focus {
+  background-color: #D33A2C;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #FFFFFF;
+}
+.popup-content{
+  width:35% !important;
+  text-align: center !important;
+
+}
+.popup-content h5{
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  text-align: center;
+}
+.popup-content p{
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  text-align: center;
+}
+#otp-lock{
+  width: 30px;
+  margin: auto;
+  color:white;
+  background-color: #D33A2C;
+  border-radius: 100%;
+  font-size: 20px;
+}
+.otp-btn{
+  font-size: 14px;
+font-weight: 600;
+padding: 15px 25px;
+color: white;
+background-color: rgb(222, 93, 93);
+border-radius: 4px;
+cursor: pointer;
+border: none;
+outline: none;
+transition: 0.2s;
+margin: 20px 50px 20px 50px;
+}
+.otp-confirm{
+  
+  background-color: rgb(71, 148, 71);
+}
