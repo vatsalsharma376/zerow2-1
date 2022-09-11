@@ -4,12 +4,15 @@ import cors from "cors";
 import mongoose from "mongoose";
 import path from "path";
 import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import { fileURLToPath } from 'url';
 dotenv.config();
 
 import { router as userRouter } from "./routes/user.js";
 
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
 
+const __dirname = path.dirname(__filename);
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
