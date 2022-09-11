@@ -14,6 +14,18 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/api", userRouter);
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/build/index.html"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      }
+    }
+  );
+});
 const CONNECTION_URL = process.env.MONGODB_URI;
   // "mongodb+srv://vatsal:vatsal@zerow.ujvzx.mongodb.net/?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5001;
