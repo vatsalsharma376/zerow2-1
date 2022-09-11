@@ -1,1 +1,1 @@
-export const REACT_APP_SERVER_BASE_URL = "https://zerow1.herokuapp.com:27507"
+export const REACT_APP_SERVER_BASE_URL = "https://zerow1.herokuapp.com"
