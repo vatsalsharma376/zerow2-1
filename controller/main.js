@@ -5,7 +5,7 @@ dotenv.config();
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = new Twilio(accountSid, authToken);
-const sendOTP = async (phoneNumber, key) => {
+const sendOTP = (phoneNumber, key) => {
   console.log("OTP sending function called" + phoneNumber);
   const phoneNumberwithCode = "+91" + phoneNumber;
   const msgBody = "Your donation's verification code from Zerow is " + key;
@@ -36,7 +36,7 @@ export const addDonation = async (req, res) => {
     const newDonation = new Donations(req.body);
     const donation = await newDonation.save();
     console.log("The donation is added");
-    await sendOTP(req.body.phone, key);
+    sendOTP(req.body.phone, key);
     console.log("OTP sent");
     return res
       .status(200)
