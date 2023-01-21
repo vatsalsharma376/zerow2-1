@@ -19,7 +19,7 @@ const sendOTP = async (phoneNumber, key) => {
       })
       .then((message) => console.log(message.sid))
       .catch((err) => {
-        console.log(err);
+        console.log("Twilio error",err);
       });
   } catch (err) {
     console.log("Error sending message", err);
@@ -36,7 +36,7 @@ export const addDonation = async (req, res) => {
     const newDonation = new Donations(req.body);
     const donation = await newDonation.save();
     console.log("The donation is added");
-    sendOTP(req.body.phone, key);
+    await sendOTP(req.body.phone, key);
     console.log("OTP sent");
     return res
       .status(200)
